@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 var stomp = require('stomp');
 
 var num = process.argv[2];
@@ -11,7 +9,7 @@ var receipt = true;
 // Set debug to true for more verbose output.
 // login and passcode are optional (required by rabbitMQ)
 var stomp_args = {
-    port: 61616,
+    port: 61613,
     host: '127.0.0.1',
     debug: true,
     //login: 'guest',
@@ -20,7 +18,7 @@ var stomp_args = {
 
 var client = new stomp.Stomp(stomp_args);
 
-var queue = '/queue/vcf';
+var queue = '/queue/incoming.vcf';
 
 client.connect();
 
