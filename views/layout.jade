@@ -11,7 +11,7 @@ html(lang='en')
     link(href='http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css', rel='stylesheet', type='text/css')
     //
        Le fav and touch icons 
-    link(rel='shortcut icon', href='images/nodester_favicon.ico')
+    link(rel='shortcut icon', href='images/vcf_favicon.ico')
     link(rel='apple-touch-icon', href='images/apple-touch-icon.png')
     link(rel='apple-touch-icon', sizes='72x72', href='images/apple-touch-icon-72x72.png')
     link(rel='apple-touch-icon', sizes='114x114', href='images/apple-touch-icon-114x114.png')
@@ -70,7 +70,7 @@ html(lang='en')
         br
         p
           strong Heads up!
-          | &nbsp;&nbsp;We now support Node.JS versions 0.4.12, 0.6.12, 0.6.17, and
+          | &nbsp;&nbsp;We now support PaaS versions 0.4.12, 0.6.12, 0.6.17, and
           | 0.8.1!
         br
         #reqbutton.btn.primary.large
@@ -93,7 +93,7 @@ html(lang='en')
           h2
             img(src='images/packagecarflame-left.png', width='30')
             | Systems Check
-          p Request your free Nodester Node.JS hosting coupon
+          p Request your free VCF PaaS hosting coupon
         .span-one-third
           h2
             img(src='images/packagecarflame-left.png', width='30')
@@ -109,13 +109,13 @@ html(lang='en')
       .row
         .span-one-third
           pre.prettyprint.
-            \ncurl -X POST -d "email=you@gmail.com" http://vcf.air.ups.com/coupon            
+            curl -X POST -d "email=you@gmail.com" http://vcf.air.ups.com/coupon            
         .span-one-third
           pre.prettyprint.
-            \nnpm install nodester-cli -g            nodester user setup <user> <pass>            nodester user setkey            
+            npm install vcf-cli -g            vcf user setup <user> <pass>            vcf user setkey            
         .span-one-third
           pre.prettyprint.
-            \nnodester app create <appname>            nodester app init <appname>            
+            vcf app create <appname>            vcf app init <appname>            
       footer.footer
         .container
           p

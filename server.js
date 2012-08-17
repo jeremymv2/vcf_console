@@ -1,6 +1,8 @@
 //create an app server
 var express = require("express")
 var app = express();
+var producer = require("./producer");
+
 app.use(express.bodyParser());
 //set path to the views (template) directory
 app.set('views', __dirname + '/views');
@@ -14,6 +16,8 @@ app.post('/launch', function(req, res){
   res.writeHead(200, {"Content-Type": "text/html"});
   res.write("Got: appname=" +appname,"utf8");
   res.end();
+  //do stomp
+  producer.sendMsg(appname);
 
 });
 //listen on localhost:3000
