@@ -20,7 +20,7 @@ function sendMsg(appname) {
       }, receipt);
   	console.log('Produced message with body ' + appname);
   	client.disconnect();
-  	process.exit(0);
+  	//process.exit(0);
 	});
 
 	client.on('receipt', function(receipt) {
